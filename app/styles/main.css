@@ -79,6 +79,19 @@ var {
     border-left: 1em solid var(--blue);
 }
 
+.danger a,
+.info a {
+    color: var(--black);
+}
+
+.danger code,
+.danger var,
+.info code,
+.info var {
+    color: var(--white);
+    background: var(--black);
+}
+
 .text--uppercase {
     text-transform: uppercase;
 }
