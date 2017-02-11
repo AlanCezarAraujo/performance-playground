@@ -37,6 +37,12 @@ img {
     max-width: 100%;
 }
 
+code {
+    background: var(--white);
+    color: var(--black);
+    padding: .2em;
+}
+
 .hidden {
     display: none;
 }
