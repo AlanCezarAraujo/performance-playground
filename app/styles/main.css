@@ -33,6 +33,10 @@ a {
     color: var(--white)
 }
 
+img {
+    max-width: 100%;
+}
+
 .hidden {
     display: none;
 }
