@@ -1,0 +1,13 @@
+.heavyDOMContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    background: var(--purple);
+    color: var(--white);
+    margin: 1em 2em 1em 0em;
+    text-align: left;
+}
