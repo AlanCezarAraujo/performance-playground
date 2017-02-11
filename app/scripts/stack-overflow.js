@@ -3,8 +3,11 @@
 
     let btnRecursiveCall = document.getElementById('btnRecursiveCall');
     let txtRounds = document.getElementById('txtRounds');
+    let calls = 0;
 
     function recursiveCall() {
+        ++calls;
+
         recursiveCall();
     }
 
@@ -15,7 +18,9 @@
             recursiveCall();
         } catch (exception) {
             document.getElementById('stackOverflow').style.display = 'block';
-            console.error('StackOverflow', exception);
+
+            console.info(`The program has crashed after ${calls} calls`)
+            console.error(exception);
         }
     }
 
