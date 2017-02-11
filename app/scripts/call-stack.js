@@ -16,6 +16,8 @@
     }
 
     function getFullname(name, lastName) {
+        debugger;
+
         return `${ name } ${ lastName }!`;
     }
 
