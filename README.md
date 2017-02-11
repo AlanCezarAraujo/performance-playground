@@ -12,5 +12,5 @@ Demo criada para o meetup [AngularSP IBM #11](https://www.meetup.com/pt-BR/Angul
 ## Contribuições
 
 Quer adicionar novas labs? Show!  
-Faça um fork do projeto, crie uma branch pra sua lab e depois faça um PR! :D
-Se precisar de alguma ajuda, [me manda uma mensagem](https://twitter.com/AlanCezarAraujo).
+Faça um fork do projeto, crie uma branch pra sua lab e depois faça um PR! :D  
+Se precisar de alguma ajuda, [me mande uma mensagem](https://twitter.com/AlanCezarAraujo).
