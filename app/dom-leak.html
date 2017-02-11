@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Leak</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dom-leak.css">
+</head>
+<body>
+    <h1>DOM Leak</h1>
+
+    <button id="btnInsertElements">Insert Elements</button>
+
+    <button id="btnRemoveElements">Remove Elements</button>
+
+    <button id="btnFixLeak">Fix DOM Leak</button>
+    
+    <div id="heavyDOMContainer" class="heavyDOMContainer"></div>
+    
+    <script src="scripts/dom-leak.js"></script>
+</body>
+</html>

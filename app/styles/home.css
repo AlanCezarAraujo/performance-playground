@@ -1,0 +1,44 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 1em 1em 0;
+}
+
+.scenarios__link {
+    color: var(--white);
+    display: flex;
+    height: 300px;
+    width: 300px;
+    align-items: flex-end;
+    padding: 1em;
+    background-blend-mode: multiply;
+    background-color: var(--gray);
+    background-size: cover;
+    transition: all ease .3s;
+}
+
+.scenarios__link:hover {
+    background-color: var(--light-gray);
+}
+
+.call-stack {
+    background-image: url(../images/stack-debug.png);
+}
+
+.dom-leak {
+    background-image: url(../images/dom-leak.png);
+}
+
+.forced-sync {
+    background-image: url(../images/forced-sync.png);
+}
+
+.memory-leak {
+    background-image: url(../images/memory-leak.png);
+}
