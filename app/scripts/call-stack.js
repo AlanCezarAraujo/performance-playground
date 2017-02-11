@@ -4,6 +4,8 @@
     let btnMakeSimpleCallStack = document.getElementById('btnMakeSimpleCallStack');
 
     function makeTheFisrtCall() {
+        debugger;
+
         printSomeMessage();
     }
 
