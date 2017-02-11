@@ -37,10 +37,11 @@ img {
     max-width: 100%;
 }
 
-code {
+code,
+var {
     background: var(--white);
     color: var(--black);
-    padding: .2em;
+    padding: .2em 0.5em;
 }
 
 .hidden {
