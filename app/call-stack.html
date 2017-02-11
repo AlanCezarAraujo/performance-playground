@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Call Stack</title>
 
     <link rel="stylesheet" href="styles/main.css">
@@ -10,19 +14,99 @@
     <h1>Call Stack</h1>
 
     <section>
-        <h2>Simple Call Stack</h2>
+        <h2>Definição</h2>
 
-        <button id="btnMakeSimpleCallStack">Make a simple Call Stack</button>
+        <p>
+            O <i>call stack</i> é a pilha de chamadas de execução do programa.
+        </p>
+
+        <p>
+            Conforme nossas funções são executadas, elas vão sendo empilhadas uma sobre a outra,
+            e depois removidas dessa pilha em ordem regressiva.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Passo a passo</h2>
+
+        <ol>
+            <li>
+                Abra o <i>DevTools</i> apertando a tecla <i>F12</i>
+            </li>
+
+            <li>
+                <button id="btnMakeSimpleCallStack">Navegue por uma pilha de execução.</button>
+            </li>
+
+            <li>
+                <p>
+                    Note que eu utilizei a palavra chave <code>debugger</code>, assim consigo inserir automaticamente
+                    um <i>breakpoint</i> no meu código forçando a pausa de sua execução conforme imagem a seguir.
+                </p>
+
+                <img src="images/call-stack/01.png" alt="Depurador JavaScript do DevTools pausado no debugger;" />
+
+                <p>
+                    Perceba também que no painel <i>Call Stack</i> só tem a função <var>makeTheFisrtCall</var>, que no
+                    caso é a função que está sendo executada.
+                </p>
+
+                <img src="images/call-stack/02.png" alt="Call Stack com a função makeTheFisrtCall." />
+            </li>
+
+            <li>
+                <p>
+                    Aperte <i>F8</i>, e o depurador irá pular para a execução da função <var>getFullname</var>.
+                    Agora temos 3 funções na pilha de execução.
+                </p>
+
+                <img src="images/call-stack/03.png" alt="Callstack com a função getFullname.">
+            </li>
+
+            <li>
+                <p>
+                    Agora conforme você vai pressionando <i>F10</i>, você acompanhará a pilha de execução sendo esvaziada
+                    conforme as funções terminam suas instruções.
+                </p>
+            </li>
+        </ol>
     </section>
 
     <script src="scripts/call-stack.js"></script>
 
     <section>
-        <h2>Make a Stack Overflow Error</h2>
+        <h2>Stack Overflow</h2>
 
-        <button id="btnRecursiveCall">Break me</button>
+        <p>
+            Quantas funções cabem em uma pilha de chamadas? A resposta mais correta seria: o quanto de recurso a
+            <abbr title="Virtual Machine">VM</abbr> decidir usar. Pode ser um valor fixo ou de acordo com a memória disponível.
+        </p>
 
-        <div id="stackOverflow" class="error hidden">You got a <strong>StackOverflow</strong> error!</div>
+        <p>
+            Ao atingir esse limite, ocorre um erro na execução do nosso programa.
+            Clique no botão abaixo e depois verifique a excessão no <i>console</i>.
+        </p>
+
+        <button id="btnRecursiveCall">Force um erro de Stack Overflow</button>
+        <div id="stackOverflow" class="error hidden">Opa! Ocorreu um erro de <strong>Stack Overflow</strong>!</div>
+
+        <p>
+            Você deverá visualizar um erro igual ao erro na imagem abaixo.
+        </p>
+
+        <img src="images/call-stack/04.png" alt="Erro de pilha de execução" />.
+
+        <p>
+            Conseguimos causar esse erro fazendo uma chamada recursiva da função <var>recursiveCall</var>,
+            sem informar um fim ao programa.
+        </p>
+
+        <p class="info">
+            Existe uma proposta chamada <a href="https://github.com/tc39/proposal-ptc-syntax">Syntactic Tail Calls</a>,
+            que possibilitaria que a função <var>recursiveCall</var> fosse executada <em>eternamente</em>.
+            Essa proposta traria melhorias no contexto de execução de funções no JavaScript. 
+        </p>
     </section>
 
     <script src="scripts/stack-overflow.js"></script>

@@ -4,6 +4,8 @@
     let btnMakeSimpleCallStack = document.getElementById('btnMakeSimpleCallStack');
 
     function makeTheFisrtCall() {
+        debugger;
+
         printSomeMessage();
     }
 
@@ -14,6 +16,8 @@
     }
 
     function getFullname(name, lastName) {
+        debugger;
+
         return `${ name } ${ lastName }!`;
     }
 

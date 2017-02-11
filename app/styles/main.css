@@ -2,6 +2,7 @@
     --black: #2c2c2c;
     --white: #d4d4d4;
     --purple: #5f2b94;
+    --blue: #4b4ba8;
     --red: #ff3d3d;
     --gray: #4a4a4a;
     --light-gray: #a2a2a2;
@@ -33,6 +34,25 @@ a {
     color: var(--white)
 }
 
+p {
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    margin-bottom: 2em;
+}
+
+code,
+var {
+    background: var(--white);
+    color: var(--black);
+    padding: .2em 0.5em;
+}
+
 .hidden {
     display: none;
 }
@@ -49,17 +69,27 @@ a {
     color: var(--red);
     background: var(--white);
     padding: 1em;
-    border-left: 3em solid var(--red);
-    position: relative;
+    border-left: 1em solid var(--red);
 }
 
-.danger:before {
-    content: '😅';
-    position: absolute;
-    left: -1.15em;
+.info {
+    color: var(--blue);
+    background: var(--white);
+    padding: 1em;
+    border-left: 1em solid var(--blue);
+}
+
+.danger a,
+.info a {
+    color: var(--black);
+}
+
+.danger code,
+.danger var,
+.info code,
+.info var {
     color: var(--white);
-    font-size: 2.5em;
-    top: 0.1em;
+    background: var(--black);
 }
 
 .text--uppercase {
