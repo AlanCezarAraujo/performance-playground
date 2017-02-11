@@ -41,6 +41,10 @@ img {
     max-width: 100%;
 }
 
+li {
+    margin-bottom: 2em;
+}
+
 code,
 var {
     background: var(--white);
